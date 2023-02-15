@@ -10,6 +10,12 @@ const options = {
 
 const app = express()
 
+app.use(express.static('./'));
+
+app.get('/', function(req, res) {
+    res.render('index.html');
+});
+
 const hostname = '0.0.0.0';
 const port = 3002;
 const securePort = 3444;
