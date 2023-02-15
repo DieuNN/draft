@@ -7,8 +7,8 @@ const options = {
     cert: fs.readFileSync('certificate.crt')
 };
 
-const hostname = '127.0.0.1';
-const port = 3001;
+const hostname = 'localhost';
+const port = 3000;
 const securePort = 3443;
 
 const httpsServer = https.createServer(options, (req, res) => {
@@ -26,7 +26,7 @@ const httpServer = http.createServer((req, res) => {
 
 
 httpServer.listen(port, hostname, () => {
-    console.log(`Server running at https://${hostname}:${port}/`);
+    console.log(`Server running at http://${hostname}:${port}/`);
 });
 
 httpsServer.listen(securePort, hostname, () => {
