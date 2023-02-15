@@ -7,8 +7,8 @@ const options = {
     cert: fs.readFileSync('certificate.crt')
 };
 
-const hostname = 'localhost';
-const port = 3000;
+const hostname = '0.0.0.0';
+const port = 3001;
 const securePort = 3443;
 
 const httpsServer = https.createServer(options, (req, res) => {
@@ -18,8 +18,6 @@ const httpsServer = https.createServer(options, (req, res) => {
 });
 
 const httpServer = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
     res.end('Hello, World!\n');
 });
 
