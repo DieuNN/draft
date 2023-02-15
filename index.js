@@ -34,7 +34,7 @@ app.get("/healthz", (req, res)=> {
 https.createServer(options, app).listen(securePort, hostname, (req, res) => {
     console.log("Https server created")
 });
-http.createServer(app).listen(securePort, hostname, (req, res)=> {
+http.createServer(app).listen(port, hostname, (req, res)=> {
     console.log("HTTP server created")
 });
 
