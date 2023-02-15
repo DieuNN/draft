@@ -17,7 +17,7 @@ const httpsServer = https.createServer(options, (req, res) => {
     res.end('Hello, World!\n');
 });
 
-const httpServer = https.createServer(options, (req, res) => {
+const httpServer = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
     res.end('Hello, World!\n');
@@ -30,5 +30,5 @@ httpServer.listen(port, hostname, () => {
 });
 
 httpsServer.listen(securePort, hostname, () => {
-    console.log(`Secure server running at https://${hostname}:${port}/`);
+    console.log(`Secure server running at https://${hostname}:${securePort}/`);
 });
