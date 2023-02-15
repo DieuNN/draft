@@ -11,8 +11,8 @@ const options = {
 const app = express()
 
 const hostname = '0.0.0.0';
-const port = 3001;
-const securePort = 3443;
+const port = 3002;
+const securePort = 3444;
 
 
 app.get('/', (req, res) => {
