@@ -11,6 +11,7 @@ const options = {
 const app = express()
 
 app.use(express.static('./'));
+app.use(express.static(path.join(__dirname, '/')));
 
 app.get('/', function(req, res) {
     res.render('index.html');
