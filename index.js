@@ -11,15 +11,9 @@ const hostname = '0.0.0.0';
 const port = 3001;
 const securePort = 3443;
 
-const httpsServer = https.createServer(options, (req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello, World!\n');
-});
+const httpsServer = https.createServer(options);
 
-const httpServer = http.createServer((req, res) => {
-    res.end('Hello, World!\n');
-});
+const httpServer = http.createServer();
 
 
 
