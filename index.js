@@ -16,7 +16,7 @@ const securePort = 3444;
 
 
 app.get('/', (req, res) => {
-    res.send("Home")
+    res.send("Tuyết ế không có người yêu")
 })
 app.get('/hello', (req, res) => {
     res.send('Hello, Your mom!');
