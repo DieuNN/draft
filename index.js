@@ -22,6 +22,11 @@ app.get('/hello', (req, res) => {
     res.send('Hello, Your mom!');
 });
 
+app.get("/healthz", (req, res)=> {
+    res.status(200)
+    res.send("OK")
+})
+
 // app.listen(port, hostname, () => {
 //     console.log(`Server running at http://${hostname}:${port}/`);
 // });
