@@ -2,6 +2,7 @@ const https = require('https');
 const fs = require('fs');
 const http = require('http')
 const express = require('express');
+const path = require("path");
 
 const options = {
     key: fs.readFileSync('private.key'),
@@ -10,16 +11,16 @@ const options = {
 
 const app = express()
 
-app.use(express.static('./'));
-app.use(express.static(path.join(__dirname, '/')));
+app.set("view engine", 'ejs')
+app.use(express.static('public'))
 
-app.get('/', function(req, res) {
-    res.render('index.html');
+app.get('/', (req, res) => {
+    res.render('index', { title: 'Express.js and EJS Example', message: 'Hello, World!' });
 });
 
 const hostname = '0.0.0.0';
-const port = 3002;
-const securePort = 3444;
+const port = 3000;
+const securePort = 3443;
 
 app.get('/hello', (req, res) => {
     res.send('Hello, Your mom!');
