@@ -15,7 +15,7 @@ app.set("view engine", 'ejs')
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.render('empty');
+    res.render('index');
 });
 
 // Gioi thieu cong ty
@@ -31,6 +31,44 @@ app.get('/doi-tac', (req, res)=> {
 app.get('/doi-ngu-nhan-su', (req, res)=> {
     res.render("gioi_thieu/doi_ngu_nhan_su")
 })
+
+// Du an
+app.get('/du-an', (req, res)=> {
+    res.render("du_an/du_an")
+})
+
+// Hoat dong
+app.get('/hoat-dong', (req, res)=> {
+    res.render("hoat_dong/hoat_dong")
+})
+
+// Lien he
+app.get('/lien-he', (req, res)=> {
+    res.render("lien_he/lien_he")
+})
+
+// San pham
+app.get('/san-pham/may-nen-khi-hitachi', (req, res)=> {
+    res.render("san_pham/may_nen_khi_hitachi")
+})
+app.get('/san-pham/may-nen-khi-cao-ap-hertz', (req, res)=> {
+    res.render("san_pham/may_nen_khi_cao_ap_hertz")
+})
+app.get('/san-pham/may-tao-khi-nito', (req, res)=> {
+    res.render("san_pham/may_tao_khi_nito")
+})
+app.get('/san-pham/may-say-khi', (req, res)=> {
+    res.render("san_pham/may_say_khi")
+})
+app.get('/san-pham/may-bien-ap-abb-hitachi', (req, res)=> {
+    res.render("san_pham/may_bien_app_app_hitachi")
+})
+app.get('/san-pham/san-pham-khac', (req, res)=> {
+    res.render("san_pham/san_pham_khac")
+})
+
+
+
 
 
 
