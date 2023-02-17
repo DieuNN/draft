@@ -15,7 +15,7 @@ app.set("view engine", 'ejs')
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Express.js and EJS Example', message: 'Hello, World!' });
+    res.render('index');
 });
 
 const hostname = '0.0.0.0';
