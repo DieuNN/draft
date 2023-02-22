@@ -114,6 +114,9 @@ app.get('/san-pham/may-say-khi-hut-am-orion', (req, res) => {
 app.get('/san-pham/may-nen-khi-hitachi', (req, res) => {
     res.render("san_pham/may_nen_khi_hitachi")
 })
+app.get('/san-pham/may-nen-khi-hitachi-truc-vit-ngam-dau-180-250kw', (req, res) => {
+    res.render("san_pham/may_nen_khi_hitachi_truc_vit_ngam_dau_180_250kw")
+})
 
 app.get('/san-pham/loc-khi-nano-noi-ren', (req, res) => {
     res.render("san_pham/loc_khi_nano_noi_ren")
