@@ -127,6 +127,9 @@ app.get('/san-pham/loc-khi-orion', (req, res) => {
 app.get('/san-pham/bo-loc-nuoc-psi', (req, res) => {
     res.render("san_pham/bo_loc_nuoc_psi")
 })
+app.get('/san-pham/san-pham-noi-bat', (req, res) => {
+    res.render("san_pham/san_pham_noi_bat")
+})
 app.get('/san-pham/may-nen-khi-piston-bebicon-co-dau', (req, res) => {
     res.render("san_pham/may_nen_khi_piston_bebicon_co_dau")
 })
