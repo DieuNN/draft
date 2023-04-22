@@ -216,7 +216,7 @@ app.get('/san-pham/san-pham-khac', (req, res) => {
 })
 
 
-const hostname = 'localhost';
+const hostname = '0.0.0.0';
 const port = 3000;
 const securePort = 3443;
 
